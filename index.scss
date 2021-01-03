@@ -1,0 +1,288 @@
+#main_focus {
+    color:rgb(196, 196, 34);
+}
+
+.focus {
+    color: yellow;
+}
+
+.icons {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.icons li {
+    list-style: none;
+    margin: 0 15px;
+}
+.icons li a {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background: #333;
+    border-radius:50%;
+    font-size: 30px;
+    color: gold;
+    transition: .5s;
+}
+.icons li a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ffee10;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+.icons li a:hover:before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffee10;
+}
+.icons li a:hover {
+    color: #ffee10;
+    box-shadow: 0 0 5px #ffee10;
+    text-shadow: 0 0 5px #ffee10;
+}
+
+.duration {
+    font-weight: bold;
+    color:lime;
+}
+
+#self_carousel {
+    text-align:center;
+    width:100%;
+}
+
+.leftdoor {
+    position:absolute;
+    width:50vw;
+    height:100vh;
+    display:block;
+    margin-left:auto;
+    margin-right:0;
+    background-color:brown;
+    z-index:100;
+
+}
+
+.rightdoor {
+    position:absolute;
+    right:0px;
+    width:50vw;
+    height:100vh;
+    display:block;
+    margin-left:0;
+    margin-right:auto;
+    background-color:brown;
+    z-index:100;
+}
+
+.name {
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+    text-align:center;
+    font-size: 60px;
+    font-family: 'Alegreya Sans', sans-serif;
+    width:100%;
+    height:100%;
+    letter-spacing:5px;
+}
+
+.opening_icon {
+    border-radius:50%;
+    width:12%;
+    position:relative;
+    bottom: 5000px;
+    border: 5px solid black;
+}
+
+/* Letter IDs */
+#S {
+    position:relative;
+    opacity:0;
+}
+#T {
+    position:relative;
+    opacity:0;
+}
+#E {
+    position:relative;
+    opacity:0;
+}
+#P {
+    position:relative;
+    opacity:0;
+}
+#H {
+    position:relative;
+    opacity:0;
+}
+#E2 {
+    position:relative;
+    opacity:0;
+}
+#N {
+    position:relative;
+    opacity:0;
+}
+#P2 {
+    position:relative;
+    opacity:0;
+}
+#dot {
+    position:relative;
+    opacity:0;
+}
+
+.hello_head {
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+    text-align:center;
+    font-size: 30px;
+    font-family: 'Inconsolata', Consolas, monospace;
+    width:100%;
+    height:160%;
+    letter-spacing:5px;
+
+}
+
+.centre {
+    text-align:center;
+}
+
+.intro {
+    font-size:25px;
+}
+
+.fullname {
+    color: #fff;
+    font-family: Monoton;
+    font-weight:bold;
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+.fullname:hover {
+    color: #FF1177;
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+}
+
+.namewrap {
+    color: #fff;
+    z-index: 2;
+}
+
+.first_page {
+    height:100vh;
+}
+
+
+/*glow for webkit*/
+
+@-webkit-keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px #fff,
+        0 0 40px #FF1177,
+        0 0 70px #FF1177,
+        0 0 80px #FF1177,
+        0 0 100px #FF1177,
+        0 0 150px #FF1177;
+    }
+    to {
+      text-shadow: 0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #fff,
+        0 0 20px #FF1177,
+        0 0 35px #FF1177,
+        0 0 40px #FF1177,
+        0 0 50px #FF1177,
+        0 0 75px #FF1177;
+    }
+  }
+
+/* ==========================================STARRY BACKGROUND======================================= */
+
+#snow {
+	background: none;
+	z-index: -1;
+	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake1.png'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake2.png'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake3.png');
+	height: 100vh;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	-webkit-animation: snow 10s linear infinite;
+	-moz-animation: snow 10s linear infinite;
+	-ms-animation: snow 10s linear infinite;
+	animation: snow 10s linear infinite;
+}
+@keyframes snow {
+ 0% {
+background-position: 0px 0px, 0px 0px, 0px 0px;
+}
+ 50% {
+background-position: 500px 500px, 100px 200px, -100px 150px;
+}
+ 100% {
+background-position: 500px 1000px, 200px 400px, -100px 300px;
+}
+}
+@-moz-keyframes snow {
+ 0% {
+background-position: 0px 0px, 0px 0px, 0px 0px;
+}
+ 50% {
+background-position: 500px 500px, 100px 200px, -100px 150px;
+}
+ 100% {
+background-position: 400px 1000px, 200px 400px, 100px 300px;
+}
+}
+@-webkit-keyframes snow {
+ 0% {
+background-position: 0px 0px, 0px 0px, 0px 0px;
+}
+ 50% {
+background-position: 500px 500px, 100px 200px, -100px 150px;
+}
+ 100% {
+background-position: 500px 1000px, 200px 400px, -100px 300px;
+}
+}
+@-ms-keyframes snow {
+ 0% {
+background-position: 0px 0px, 0px 0px, 0px 0px;
+}
+ 50% {
+background-position: 500px 500px, 100px 200px, -100px 150px;
+}
+ 100% {
+background-position: 500px 1000px, 200px 400px, -100px 300px;
+}
+}

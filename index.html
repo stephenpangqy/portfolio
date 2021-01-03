@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen's Portfolio</title>
+
+    <!--Required links for animations and other CSS items-->
+    <link rel="stylesheet" href="index.scss">
+    <script src='sparkle.js/dist/sparkle.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            background-color:black;
+            color:white;
+            overflow:hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="snow"></div>
+    <!-- Opening Shutters -->
+    <div class="leftdoor"></div>
+    <div class="rightdoor"></div>
+    <div class="flex_container">
+        <div class="name">
+            <span id="S">S</span>
+            <span id="T">T</span>
+            <span id="E">E</span>
+            <span id="P">P</span>
+            <span id="H">H</span>
+            <span id='E2'>E</span>
+            <span id="N">N</span>
+            &nbsp;
+            <span id="P2">P</span>
+            <span id="dot">.</span>
+            &nbsp;
+            <img src='images/static_opening.png' class="opening_icon">
+        </div>
+        <div id="opening_header" class="hello_head"></div>
+    </div>
+    
+
+    
+    <div class="container first_page">
+        <div class="row">
+            <h3 id="main_focus" class="col centre">MY MAIN FOCUSES:</h3>
+        </div>
+        <div class="row">
+            <h1 class="col centre focus">< FUNCTIONALITY ></h1>
+        </div>
+        <div class="row">
+            <h1 class="col centre focus">< EFFICIENCY ></h1>
+        </div>
+        <div class="row">
+            <h1 class="col centre focus">< EASE OF USE ></h1>
+        </div>
+        <div class="row">
+            <div class="col intro">
+                <p class="centre">Hello! I am <span class="namewrap fullname">Stephen Pang</span>, an enthusiast in front-end & back-end web development.
+                    <br>
+                    With a keen and willing interest to learn, I aim to improve my programming expertise and build web applications that can improve the quality of life of users.
+                </p>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <!-- Carousel of my images-->
+            <div id="self_carousel" class="row carousel slide w-25 mx-auto mb-4" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#self_carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#self_carousel" data-slide-to="1"></li>
+                  <li data-target="#self_carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/image3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/image1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/image2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#self_carousel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#self_carousel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col">
+                <ul class="icons">
+                    <li><a href='https://www.linkedin.com/in/stephenpangqy/'><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href='https://github.com/stephenpangqy'><i class="fab fa-github"></i></a></li>
+                    <li><a href='https://www.instagram.com/insta.stephen/'><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <br> <!-- Remove <br> once margin is fixed ( TODO )-->
+        <div class="row">
+            <div class="col-2 animated wow slideInUp">
+                <h3 data-toggle="collapse" href="#about" role="button" aria-expanded="false" aria-controls="about" onclick="openAbout()">About</h3>
+                <!-- <div class="collapse" id="about">
+                    <p>I am currently a Year 2 student at the School of Information Systems at Singapore Management University (SMU). </p>
+                    <p>I am majoring in 2 tracks: Business Analytics (BA) and Digital Cloud Solutioning (DCS)</p>
+                    <p>I have a strong passion for programming in back-end web development and coming up with creative digital solutions to solve problems faced in the world.</p>
+                    <p>I also like to read books in my spare time.</p>
+
+                </div> -->
+            </div>
+            <div class="col-5 animated wow slideInUp">
+                <h3 data-toggle="collapse" href="#jobs" role="button" aria-expanded="false" aria-controls="jobs">Part-Time Jobs and Internships</h3>
+                <!-- <div class="collapse" id="jobs">
+                    <h5>Introduction to Python Programming (IS111) Teaching Assistant @ SMU</h5>
+                    <ul>
+                        <li><span class="duration">Duration:</span> Aug 2020 - Nov 2020 [4 months]</li>
+                        <li>Grading of students' lab work and providing feedback on their code.</li>
+                        <li>Assisting professor Jiang Jing with administrative tasks in lessons.</li>
+                        <li>Giving consultations and clarifying students' programming doubts.</li>
+                        <li>Setting practice questions for students' to practice in their free time.</li>
+                    </ul>
+
+                    <h5>Undergraduate Research Assistant @ SMU</h5>
+                    <ul>
+                        <li><span class="duration">Duration:</span> Apr 2020 - Aug 2020 [5 months]</li>
+                        <li>Assistant for Professor Kyong Jin Shim.</li>
+                        <li>Used Microsoft Excel Sheets to store MLBB game data information.</li>
+                        <li>Worked in a team to create a web application that displays MLBB data and statistics from excel sheets as information for players to view, allowing them to utilize it for their gameplay.</li>
+                        <li>Used prototyping tools such as Invision to plan out the flow of the web application.</li>
+                    </ul>
+                </div> -->
+            </div>
+            <div class="col-3 animated wow slideInUp">
+                <h3 data-toggle="collapse" href="#skills" role="button" aria-expanded="false" aria-controls="skills">Skills & Experience</h3>
+                <!-- <div class="collapse" id="skills">
+                    <ul>
+                        <li>AWS Certified Cloud Practitioner (click <a href='https://www.youracclaim.com/badges/da8fe0d9-61c4-44bc-a24e-660c82aa2327?source=linked_in_profile'>here</a> for reference).</li>
+                        <li>Basic Python</li>
+                        <li>HTML5</li>
+                        <li>Cascading Style Sheets (CSS)</li> 
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                        <li>MySQL Databases</li>
+                        <li>Vue.js</li>
+                        <li>Ajax API Calling</li>
+                    </ul>
+                </div> -->
+            </div>
+            <div class="col-2 animated wow slideInUp">
+                <h3 data-toggle="collapse" href="#projects" role="button" aria-expanded="false" aria-controls="projects">Projects</h2>
+                <!-- <div class="collapse" id="projects">
+                    <h5>Portfolio website</h5>
+                    <ul>
+                        <li>Displays my past and current work experience in the IT industry.</li>
+                    </ul>
+                    <h5>Sakura Haruno (Attendance Tracker Telegram Bot)</h5>
+                    <ul>
+
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<!-- Internal JavaScript-->
+<script>
+    setTimeout(function() {
+        $('body').css('overflow','hidden auto')
+    },10000)
+</script>
+<!--External JavaScript -->
+<script src="index.js"></script>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js">
+</script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+</html>
